@@ -741,7 +741,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 1600, 336 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 256, 128, 1600, 327 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -986,7 +986,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -22, -45, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { 0, -35, 0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1093,7 +1093,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -1122,16 +1122,16 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 230
-#define Y_BED_SIZE 230
+#define X_BED_SIZE 220
+#define Y_BED_SIZE 220
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -35
-#define Y_MIN_POS 0
+#define X_MIN_POS -71
+#define Y_MIN_POS -58
 #define Z_MIN_POS 0
-#define X_MAX_POS 265
-#define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 230
+#define X_MAX_POS 291
+#define Y_MAX_POS 278
+#define Z_MAX_POS 330
 
 /**
  * Software Endstops
@@ -1724,7 +1724,7 @@
  * SD Card support is disabled by default. If your controller has an SD slot,
  * you must uncomment the following option or it won't work.
  */
-//#define SDSUPPORT
+#define SDSUPPORT
 
 /**
  * SD CARD: SPI SPEED
@@ -1789,7 +1789,7 @@
 //  If CLOCKWISE normally moves DOWN this makes it go UP.
 //  If CLOCKWISE normally moves UP this makes it go DOWN.
 //
-//#define REVERSE_MENU_DIRECTION
+#define REVERSE_MENU_DIRECTION
 
 //
 // This option reverses the encoder direction for Select Screen.
